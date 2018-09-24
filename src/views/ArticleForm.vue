@@ -20,6 +20,7 @@
 
 <script>
 import axios from 'axios'
+let url = 'http://blogapi.renaldypratama.xyz'
 
 export default {
   name: 'ArticleForm',
@@ -36,7 +37,7 @@ export default {
       let self = this
       axios({
         method: 'post',
-        url: 'http://localhost:3000/articles',
+        url: `${url}/articles`,
         headers: {
           token: token
         },

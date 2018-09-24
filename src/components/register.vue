@@ -35,6 +35,7 @@
 
 <script>
 import axios from 'axios'
+let url = 'http://blogapi.renaldypratama.xyz'
 
 export default {
   data() {
@@ -54,7 +55,7 @@ export default {
         let self = this
         axios({
           method: 'post',
-          url: 'http://localhost:3000/users',
+          url: `${url}/users`,
           data: {
             name: this.nameRegister,
             email: this.emailRegister,

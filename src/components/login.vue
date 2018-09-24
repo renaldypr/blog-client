@@ -32,6 +32,7 @@
 
 <script>
 import axios from 'axios'
+let url = 'http://blogapi.renaldypratama.xyz'
 
 export default {
   data() {
@@ -50,7 +51,7 @@ export default {
         let self = this;
         axios({
           method: 'post',
-          url: 'http://localhost:3000/users/login',
+          url: `${url}/users/login`,
           data: {
             email: this.emailLogin,
             password: this.passwordLogin

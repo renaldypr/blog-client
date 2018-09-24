@@ -19,6 +19,7 @@
 
 <script>
 import axios from 'axios'
+let url = 'http://blogapi.renaldypratama.xyz'
 
 export default {
   props: [ 'id' ],
@@ -34,7 +35,7 @@ export default {
       let token = localStorage.getItem('token')
       axios({
         method: 'patch',
-        url: `http://localhost:3000/articles`,
+        url: `${url}/articles`,
         headers: {
           token: token
         },
@@ -57,7 +58,7 @@ export default {
     let self = this
     axios({
       method: 'get',
-      url: `http://localhost:3000/articles/${this.id}`
+      url: `${url}/articles/${this.id}`
     })
       .then(article => {
         self.titleEdit = article.data.data.title

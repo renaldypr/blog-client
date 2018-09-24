@@ -50,6 +50,7 @@
 
 <script>
 import axios from 'axios'
+let url = 'http://blogapi.renaldypratama.xyz'
 
 export default {
   props: [ 'id', 'nowlogin' ],
@@ -68,7 +69,7 @@ export default {
       let self = this
       axios({
         method: 'post',
-        url: 'http://localhost:3000/comments',
+        url: `${url}/comments`,
         headers: {
           token: token
         },
@@ -89,7 +90,7 @@ export default {
       let self = this
       axios({
         method: 'get',
-        url: `http://localhost:3000/articles/${this.id}`
+        url: `${url}/articles/${this.id}`
       })
         .then(article => {
           self.currentArticle = article.data.data
@@ -129,7 +130,7 @@ export default {
       let token = localStorage.getItem('token')
       axios({
         method: 'delete',
-        url: `http://localhost:3000/articles`,
+        url: `${url}/articles`,
         headers: {
           token: token
         },
@@ -151,7 +152,7 @@ export default {
       let token = localStorage.getItem('token')
       axios({
         method: 'delete',
-        url: `http://localhost:3000/comments`,
+        url: `${url}/comments`,
         headers: {
           token: token
         },
@@ -169,7 +170,7 @@ export default {
     translate: function () {
       axios({
         method: 'post',
-        url: `http://localhost:3000/articles/translate`,
+        url: `${url}/articles/translate`,
         data: {
           title: this.currentArticle.title,
           content: this.currentArticle.content
@@ -190,7 +191,7 @@ export default {
     let self = this
     axios({
       method: 'get',
-      url: `http://localhost:3000/articles/${this.id}`
+      url: `${url}/articles/${this.id}`
     })
       .then(article => {
         self.currentArticle = article.data.data
@@ -209,7 +210,7 @@ export default {
       let self = this
       axios({
         method: 'get',
-        url: `http://localhost:3000/articles/${this.id}`
+        url: `${url}/articles/${this.id}`
       })
         .then(article => {
           self.currentArticle = article.data.data

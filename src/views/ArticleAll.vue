@@ -25,6 +25,7 @@
 
 <script>
 import axios from 'axios'
+let url = 'http://blogapi.renaldypratama.xyz'
 
 export default {
   name: 'articleAll',
@@ -54,7 +55,7 @@ export default {
     let self = this
     axios({
       method: 'get',
-      url: 'http://localhost:3000/articles',
+      url: `${url}/articles`,
     })
       .then(articles => {
         articles.data.data.forEach(article => {
