@@ -50,7 +50,7 @@
 
 <script>
 import axios from 'axios'
-let url = 'http://blogapi.renaldypratama.xyz'
+let url = 'https://blogapi.renaldypratama.xyz'
 
 export default {
   props: [ 'id', 'nowlogin' ],

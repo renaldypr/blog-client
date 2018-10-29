@@ -32,7 +32,7 @@
 
 <script>
 import axios from 'axios'
-let url = 'http://blogapi.renaldypratama.xyz'
+let url = 'https://blogapi.renaldypratama.xyz'
 
 export default {
   data() {
@@ -61,11 +61,11 @@ export default {
             self.emailLogin = ''
             self.passwordLogin = ''
             self.successMsg = 'Login success!'
-  
+
             localStorage.setItem('email', data.data.email)
             localStorage.setItem('user', data.data.user)
             localStorage.setItem('token', data.data.token)
-  
+
             self.$emit('is-login', true)
           })
           .catch(err => {

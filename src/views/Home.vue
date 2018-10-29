@@ -15,7 +15,7 @@ export default {
 <style scoped>
 .home {
   height: 594px;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
 }
 p {
   font-size: 200px;

@@ -17,7 +17,7 @@
           {{ successMsg }}</div>
           <div class="form-group">
               <input id="nameRegister" type="text" class="form-control" placeholder="Name" required="required" v-model="nameRegister">
-          </div>     
+          </div>
           <div class="form-group">
               <input id="emailRegister" type="email" class="form-control" placeholder="Email" required="required" v-model="emailRegister">
           </div>
@@ -26,7 +26,7 @@
           </div>
           <div class="form-group">
               <button type="button" class="btn btn-primary btn-block" v-on:click="register()">Register</button>
-          </div>     
+          </div>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
 
 <script>
 import axios from 'axios'
-let url = 'http://blogapi.renaldypratama.xyz'
+let url = 'https://blogapi.renaldypratama.xyz'
 
 export default {
   data() {

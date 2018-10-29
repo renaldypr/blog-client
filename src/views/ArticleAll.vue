@@ -25,7 +25,7 @@
 
 <script>
 import axios from 'axios'
-let url = 'http://blogapi.renaldypratama.xyz'
+let url = 'https://blogapi.renaldypratama.xyz'
 
 export default {
   name: 'articleAll',
@@ -95,7 +95,7 @@ export default {
   margin: 0 auto;
   float: none;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.5); 
+  background: rgba(255, 255, 255, 0.5);
 }
 .card h4,p {
   text-align: left;
